@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="18" fill="#F5EFE6"/>
+  <circle cx="32" cy="32" r="22" fill="#C96A45"/>
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#A84E2F" stroke-width="2"/>
+  <text x="32" y="38.5" text-anchor="middle" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#FFF8EE">RB</text>
+</svg>
