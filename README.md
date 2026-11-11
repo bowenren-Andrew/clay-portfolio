@@ -9,14 +9,21 @@ npm install
 npm run dev
 ```
 
-打开 http://127.0.0.1:5174 。生产构建：
+打开 http://127.0.0.1:5174/clay-portfolio/ 。生产构建：
 
 ```bash
 npm run build
 npm run preview
 ```
 
-预览地址为 http://127.0.0.1:4174 。
+预览地址为 http://127.0.0.1:4174/clay-portfolio/ 。
+
+## 在线部署
+
+- GitHub Pages：https://bowenren-andrew.github.io/clay-portfolio/
+- 部署分支：`master`
+- 自动部署：`.github/workflows/deploy.yml`，push 到 `master` 后构建并发布 `dist`
+- Vite `base` 为 `/clay-portfolio/`，素材路径通过 `src/data/assets.js` 统一拼接
 
 ## 页面结构
 
@@ -72,7 +79,9 @@ src/
   hooks/                  useScrollSpy / useReveal / useParallax
   styles/                 token、导航、Hero、区块、项目、联系
 public/media/             三视图与两段视频
+src/data/assets.js        base 感知的素材路径
 scripts/capture.ps1       本地 Chrome DevTools 截图脚本（可选）
+.github/workflows/        GitHub Pages 自动部署
 ```
 
 ## 验证

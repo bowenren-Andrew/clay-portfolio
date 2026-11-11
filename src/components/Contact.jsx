@@ -1,4 +1,5 @@
 import { contact, profile } from '../data/site.js'
+import { assets } from '../data/assets.js'
 import { ArrowUpRight, GitHub, Hand } from './Icons.jsx'
 
 function backToTop() {
@@ -68,7 +69,7 @@ export default function Contact() {
           <div className="contact__visual" data-parallax="0.035">
             <span className="contact__ring" aria-hidden="true" />
             <div className="contact__face">
-              <img src="/media/avatar-profile.png" alt="任博文侧面头像" />
+              <img src={assets.profile} alt="任博文侧面头像" />
             </div>
             <span className="contact__speech">
               SAY HI

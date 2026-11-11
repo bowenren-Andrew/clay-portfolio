@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { hero, profile } from '../data/site.js'
+import { assets } from '../data/assets.js'
 import { ArrowDown, ArrowUpRight, Globe, Hand, Sparkle } from './Icons.jsx'
 import BlinkAvatar from './BlinkAvatar.jsx'
 
@@ -131,8 +132,8 @@ export default function Hero() {
                 <video
                   ref={turnRef}
                   className={`portrait__video${waving ? ' is-hidden' : ''}`}
-                  src="/media/head-turn.mp4"
-                  poster="/media/avatar-front.png"
+                  src={assets.headTurn}
+                  poster={assets.front}
                   autoPlay={!reduceMotion}
                   muted
                   loop
@@ -144,7 +145,7 @@ export default function Hero() {
                 <video
                   ref={waveRef}
                   className={`portrait__video portrait__video--wave${waving ? ' is-visible' : ''}`}
-                  src="/media/wave.mp4"
+                  src={assets.wave}
                   muted
                   loop
                   playsInline
@@ -176,7 +177,7 @@ export default function Hero() {
 
             <figure className="hero__sticker" data-parallax="0.03">
               <BlinkAvatar
-                src="/media/avatar-front.png"
+                src={assets.front}
                 alt="任博文正面头像，带眨眼动画"
               />
               <figcaption>

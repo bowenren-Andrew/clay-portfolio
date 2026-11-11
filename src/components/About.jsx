@@ -1,4 +1,5 @@
 import { about, facts, learning, profile } from '../data/site.js'
+import { assets } from '../data/assets.js'
 import SectionHeader from './SectionHeader.jsx'
 import { ArrowUpRight } from './Icons.jsx'
 
@@ -18,7 +19,7 @@ export default function About() {
             <div className="about__frame" data-parallax="0.04">
               <span className="about__frame-back" aria-hidden="true" />
               <img
-                src="/media/avatar-three-quarter.png"
+                src={assets.threeQuarter}
                 alt="任博文 3/4 侧面头像"
               />
               <span className="about__frame-label">SIDE OF ME · 3/4</span>

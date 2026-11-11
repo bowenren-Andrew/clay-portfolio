@@ -5,7 +5,7 @@ param(
   [string]$Section = '',
   [string]$HoverSelector = '',
   [string]$Eval = '',
-  [string]$Url = 'http://127.0.0.1:5174/',
+  [string]$Url = 'http://127.0.0.1:5174/clay-portfolio/',
   [int]$Wait = 2800,
   [int]$Port = 9334,
   [switch]$Full,
