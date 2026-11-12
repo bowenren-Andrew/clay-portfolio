@@ -61,10 +61,12 @@ export default function ProjectCard({ project }) {
           <b>{project.index}</b>
         </span>
         <ProjectPreview project={project} />
-        <p className="project__caption">
-          <span>界面预览</span>
-          真实应用里的资料索引、带出处回答与追问流程
-        </p>
+        {project.caption && (
+          <p className="project__caption">
+            <span>界面预览</span>
+            {project.caption}
+          </p>
+        )}
       </div>
     </article>
   )

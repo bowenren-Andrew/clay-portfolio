@@ -569,6 +569,20 @@
   font-style: normal;
 }
 
+.preview--image__body {
+  padding: 10px;
+}
+
+.preview--image__img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid rgba(74, 52, 38, 0.1);
+  border-radius: 17px;
+  object-fit: contain;
+}
+
 .projects__more {
   display: flex;
   margin-top: 26px;

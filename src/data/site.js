@@ -130,6 +130,7 @@ export const projects = [
       app: 'https://ren-rag-pdf.streamlit.app/',
       repo: 'https://github.com/bowenren-Andrew/rag-pdf-qa',
     },
+    caption: '真实应用里的资料索引、带出处回答与追问流程',
     preview: {
       kind: 'rag',
       url: 'ren-rag-pdf.streamlit.app',
@@ -147,6 +148,36 @@ export const projects = [
         { name: '机器学习导论.pdf', loc: 'Ch.4 · P.87' },
         { name: '深度学习实践.pptx', loc: 'P.12' },
       ],
+    },
+  },
+  {
+    id: 'china-population-dashboard',
+    index: '02',
+    type: '开源 fork 改造',
+    tag: 'DATA DASHBOARD',
+    title: '中国人口仪表盘',
+    titleEn: 'CHINA POPULATION DASHBOARD',
+    summary:
+      '基于 dataprofessor/population-dashboard fork 改造：把美国州级人口仪表盘换成中国大陆 31 个省级行政区 2010–2023 年数据。数据来自国家统计局《中国统计年鉴》，经转录、单位换算与交叉校验；地图改用本地 GeoJSON 生成 SVG，不依赖地图 CDN。',
+    features: [
+      { title: '官方年鉴数据链', text: '三份年鉴表转录为 434 行省级面板，万人换算为人，并与全国总数交叉校验。' },
+      { title: '本地地图不空白', text: '放弃会请求 CDN 的 Plotly geo，改用本地 GeoJSON 直出 SVG choropleth，离线也能渲染。' },
+      { title: '阈值按中国数据校准', text: '净变化阈值由原版 5 万改为 ±20 万，依据省级同比变化中位数；2023 年净增 2 省、净减 7 省。' },
+      { title: '筛选与导出', text: '年份、省份多选、10 套配色、单省趋势图，当前筛选结果可下载为 CSV。' },
+    ],
+    stack: ['Streamlit', 'pandas', 'Altair', 'GeoJSON', 'SVG'],
+    links: {
+      app: 'https://china-population-dashboard.streamlit.app/',
+      repo: 'https://github.com/bowenren-Andrew/china-population-dashboard',
+    },
+    caption: '真实应用里的中国省级地图、热力图与省份排名',
+    preview: {
+      kind: 'image',
+      url: 'china-population-dashboard.streamlit.app',
+      image: 'media/projects/china-population-dashboard.png',
+      alt: '中国人口仪表盘界面预览',
+      seal: 'DATA',
+      sealSub: 'POPULATION\n2010–2023',
     },
   },
 ]

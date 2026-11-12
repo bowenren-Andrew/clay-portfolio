@@ -2,6 +2,52 @@ export default function ProjectPreview({ project }) {
   const preview = project.preview
   if (!preview) return null
 
+  if (preview.kind === 'image') {
+    const imageSrc = import.meta.env.BASE_URL + preview.image
+
+    return (
+      <div
+        className="preview preview--image"
+        role="img"
+        aria-label={preview.alt}
+      >
+        <span
+          className="preview__seal preview--image__seal"
+          aria-hidden="true"
+        >
+          {preview.seal}
+          <small>
+            {preview.sealSub.split('\n').map((line, index) => (
+              <span key={line}>
+                {index > 0 && <br />}
+                {line}
+              </span>
+            ))}
+          </small>
+        </span>
+
+        <div className="preview__window">
+          <div className="preview__bar">
+            <span className="preview__dots" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+            </span>
+            <span className="preview__url">{preview.url}</span>
+            <span className="preview__live">
+              <i />
+              LIVE
+            </span>
+          </div>
+
+          <div className="preview__body preview--image__body">
+            <img className="preview--image__img" src={imageSrc} alt="" />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="preview" role="img" aria-label="课程资料问答助手界面预览">
       <span className="preview__seal" aria-hidden="true">
